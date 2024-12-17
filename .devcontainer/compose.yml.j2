@@ -1,0 +1,11 @@
+services:
+  dev:
+    restart: always
+    # build: .
+    image: {{ project_name }}:{{ version }}
+    container_name: {{ project_name }}
+    working_dir: /{{ project_name }}/
+    volumes:
+    - /dev/shm/:/dev/shm/
+    - ./:/{{ project_name }}/
+    network_mode: host

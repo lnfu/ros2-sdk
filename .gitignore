@@ -1,0 +1,6 @@
+build/
+install/
+log/
+.devcontainer/compose.yml
+.devcontainer/devcontainer.json
+.vscode
