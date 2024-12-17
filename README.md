@@ -7,7 +7,7 @@ chmod +x ./setup.py
 ./setup.py
 ```
 
-## Useful Tips
+## Useful Commands
 
 ```sh
 ros2 pkg create --build-type ament_python <pkg_name>
@@ -28,3 +28,7 @@ colcon build --base-paths src/ -DCMAKE_BUILD_TYPE=Release
 ```sh
 source install/setup.bash
 ```
+
+## Additional Resources
+
+- https://docs.ros.org/en/humble/index.html
