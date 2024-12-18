@@ -3,8 +3,8 @@
 ## Usage
 
 ```sh
-chmod +x ./setup.py
-./setup.py
+chmod +x ./setup.sh
+./setup.sh
 ```
 
 ## Useful Commands
