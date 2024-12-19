@@ -1,5 +1,7 @@
 # ROS2 SDK
 
+![workflow](https://github.com/lnfu/ros2-sdk/actions/workflows/main.yml/badge.svg)
+
 ## Usage
 
 ```sh
