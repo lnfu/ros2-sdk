@@ -4,3 +4,6 @@ log/
 .devcontainer/compose.yml
 .devcontainer/devcontainer.json
 .vscode
+__pycache__/
+.coverage
+.coverage.*

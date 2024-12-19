@@ -17,6 +17,9 @@ ros2 pkg create --build-type ament_cmake <pkg_name>
 ```sh
 colcon test --base-paths src/ --event-handlers console_cohesion+
 colcon test --base-paths src/ --event-handlers console_cohesion+ --packages-select <pkg_name>
+
+python3 -m coverage run --source ./ -m pytest
+python3 -m coverage report
 ```
 
 ```sh
