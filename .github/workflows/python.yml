@@ -7,6 +7,7 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
+      matrix:
         env:
           - {ROS_DISTRO: melodic, ROS_REPO: testing}
           - {ROS_DISTRO: melodic, ROS_REPO: main}
