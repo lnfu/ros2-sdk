@@ -14,8 +14,8 @@ echo "\nRendering templates..."
 export project_name
 export version=$VERSION
 
-envsubst < "$WORK_DIR/$COMPOSE_FILE_NAME.template" > "$WORK_DIR/$COMPOSE_FILE_NAME"
-envsubst < "$WORK_DIR/$DEV_CONTAINER_FILE_NAME.template" > "$WORK_DIR/$DEV_CONTAINER_FILE_NAME"
+envsubst '${project_name} ${version}' < "$WORK_DIR/$COMPOSE_FILE_NAME.template" > "$WORK_DIR/$COMPOSE_FILE_NAME"
+envsubst '${project_name} ${version}' < "$WORK_DIR/$DEV_CONTAINER_FILE_NAME.template" > "$WORK_DIR/$DEV_CONTAINER_FILE_NAME"
 
 echo "compose.yml and devcontainer.json files created."
 

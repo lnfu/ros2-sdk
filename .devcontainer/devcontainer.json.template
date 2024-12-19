@@ -1,17 +1,18 @@
 {
-	"name": "$project_name",
-	// "initializeCommand": "docker build -f .devcontainer/Dockerfile --network host -t $project_name:$version .devcontainer",
-	"image": "$project_name:$version",
+	"name": "${project_name}",
+	// "initializeCommand": "docker build -f .devcontainer/Dockerfile --network host -t ${project_name}:${version} .devcontainer",
+	"image": "${project_name}:${version}",
 	"runArgs": [
 		"--network=host",
-		"--name=$project_name"
+		"--name=${project_name}"
 	],
 	"remoteUser": "root",
-	"workspaceFolder": "/$project_name/",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/$project_name/,type=bind,consistency=delegated",
+	"workspaceFolder": "/${project_name}/",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/${project_name}/,type=bind,consistency=delegated",
 	"mounts": [
 		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=consistent",
-		"source=/dev/shm/,target=/dev/shm/,type=bind,consistency=consistent"
+		"source=/dev/shm/,target=/dev/shm/,type=bind,consistency=consistent",
+		"source=${localEnv:HOME}/.gitconfig,target=/etc/gitconfig,type=bind,consistency=consistent,readonly"
 	],
 	"containerEnv": {
 		"DISPLAY": "${localEnv:DISPLAY}"
